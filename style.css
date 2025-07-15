@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  color: #333;
+  background-image: linear-gradient(to top left, #0058ab 0%, #fbd914 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* LAYOUT */
+main {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  width: 90%;
+  max-width: 120rem;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+}
+
+/* PLAYER SECTIONS */
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.player--active {
+  background-color: rgba(255, 255, 0, 0.3);
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+}
+
+.name {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #0058ab;
+}
+
+.score {
+  font-size: 6rem;
+  color: #fbd914;
+}
+
+.current {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #0058ab;
+  color: #fff;
+  border-radius: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.current-label {
+  font-size: 1.4rem;
+  color: #f0f0f0;
+}
+
+.current-score {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* BUTTONS */
+.btn {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #0058ab;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  border: 2px solid #0058ab;
+  padding: 1rem 3rem;
+  border-radius: 5rem;
+  cursor: pointer;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  background-color: #0058ab;
+  color: white;
+}
+
+.btn:active {
+  transform: translateY(2px);
+}
+
+/* HOLD BUTTON */
+.btn--hold {
+  background-color: #fbd914;
+  color: #0058ab;
+  border: 2px solid #0058ab;
+}
+
+.btn--hold:hover {
+  background-color: #0058ab;
+  color: #fbd914;
+}
+
+.buttons {
+  grid-column: span 3;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* DICE */
+.dice {
+  grid-column: span 3;
+  justify-self: center;
+  height: 8rem;
+  margin-top: 2rem;
+}
+
+.player--winner {
+  background-color: #fbd914;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+}
+
+.player--winner .name {
+  font-weight: 700;
+  color: #0058ab;
+}
+
+.hidden {
+  display: none;
+}
